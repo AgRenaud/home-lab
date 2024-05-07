@@ -1,0 +1,9 @@
+k3s.yaml
+cloud-init.yaml
+venv
+.vagrant
+ssh-key/*
+!ssh-key/.gitkeep
+
+# Ansible
+roles/xanmanning.k3s
