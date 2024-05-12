@@ -1,4 +1,4 @@
-K3S Lab
+Home Lab
 ================
 
 # Getting Started
