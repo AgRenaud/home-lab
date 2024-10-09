@@ -15,13 +15,21 @@ all:
     node03:
       ansible_host: 10.10.10.103
       ansible_ssh_private_key_file: .vagrant/machines/node03/libvirt/private_key
+    node04:
+      ansible_host: 10.10.10.104
+      ansible_ssh_private_key_file: .vagrant/machines/node04/libvirt/private_key
+
 
 
 k3s_cluster:
   vars:
     k3s_release_version: v1.29
     k3s_become: true
-
+    k3s_registries:
+      mirrors:
+        "docker.local":
+          endpoint:
+            - "http://docker-registry-service:5000"
   children:
     k3s_server:
       hosts:
@@ -31,3 +39,6 @@ k3s_cluster:
       hosts:
         node02:
         node03:
+        node04:
+
+

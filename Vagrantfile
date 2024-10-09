@@ -5,8 +5,9 @@
 
 workers = [
   { :hostname => "node01", :ip => "10.10.10.101", :memory => "2048", :cpus => 2 },
-  { :hostname => "node02", :ip => "10.10.10.102", :memory => "4096", :cpus => 4 },
-  { :hostname => "node03", :ip => "10.10.10.103", :memory => "2048", :cpus => 2 },
+  { :hostname => "node02", :ip => "10.10.10.102", :memory => "8192", :cpus => 4 },
+  { :hostname => "node03", :ip => "10.10.10.103", :memory => "4096", :cpus => 2 },
+  { :hostname => "node04", :ip => "10.10.10.104", :memory => "1024", :cpus => 1 },
 ]
 
 Vagrant.configure("2") do |config|
